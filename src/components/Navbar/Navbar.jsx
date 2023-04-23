@@ -3,25 +3,14 @@ import Searchbar from "./Searchbar";
 import Button from "../Button";
 import ProfileButton from "../Profile/ProfileButton";
 import useLoginModalStore from "../../hooks/useLoginModalStore";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const loginModalStore = useLoginModalStore()
 
   return (
     <nav
-      className="
-        fixed
-        top-0
-        z-10
-        flex
-        w-full
-        items-center
-        justify-between
-        gap-8
-        bg-slate-200
-        px-2
-        py-6
-        dark:bg-slate-800
+      className=" fixed top-0 z-50 flex w-full items-center justify-between gap-8 bg-slate-200 px-2 py-6 dark:bg-slate-700
       "
     >
       <div
@@ -31,7 +20,7 @@ const Navbar = () => {
           w-full
         "
       >
-        <div>logo</div>
+        <Link to="/">Logo</Link>
       </div>
       <div
         className="

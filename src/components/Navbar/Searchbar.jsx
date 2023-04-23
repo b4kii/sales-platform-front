@@ -15,14 +15,14 @@ const Searchbar = () => {
         gap-4
         rounded-3xl 
         bg-white 
-        shadow-md
-        shadow-gray-400
+        shadow-sm
+        shadow-slate-700
         outline-none
         outline-offset-0
         focus-within:outline
         focus-within:outline-2
         focus-within:outline-purple-400
-        dark:bg-slate-700
+        dark:bg-slate-600
         dark:shadow-slate-950
         dark:focus-within:outline-white
         md:w-80
@@ -46,7 +46,7 @@ const Searchbar = () => {
         <BiSearchAlt2
           className="
             text-2xl
-          text-purple-400
+          text-purple-800
           dark:text-white
           "
         />

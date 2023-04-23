@@ -16,7 +16,9 @@ const Layout = () => {
       <Modal />
       <ThemeButton />
       <Navbar />
-      <Outlet />
+      <div className="pt-[6rem]">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

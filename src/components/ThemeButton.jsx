@@ -7,7 +7,7 @@ const ThemeButton = () => {
 
   return (
     <button
-      className="fixed bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 text-white dark:bg-slate-200 dark:text-black shadow-xl shadow-gray-300"
+      className="fixed bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 text-white dark:bg-slate-200 dark:text-black shadow-sm shadow-black"
       onClick={themeStore.toggleTheme}
     >
       {themeStore.isLight ? <BsFillMoonStarsFill /> : <BsFillSunFill />}

@@ -10,7 +10,7 @@ const Button = ({ label, secondary, outline, onClick, className }) => {
         ${secondary ? "border-purple-400 dark:border-white" : "border-none"}
         ${
           secondary
-            ? "text-purple-400 dark:text-white"
+            ? "text-purple-800 dark:text-white"
             : "text-white dark:text-slate-950"
         }
         ${secondary ? "bg-transparent" : "bg-purple-400 dark:bg-white"}

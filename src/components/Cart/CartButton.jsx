@@ -14,10 +14,10 @@ const CartButton = () => {
         gap-2
         rounded-xl
         bg-white
-        text-purple-400
-        shadow-md
-        shadow-gray-400
-        dark:bg-slate-700
+        text-purple-800
+        shadow-sm
+        shadow-slate-700
+        dark:bg-slate-600
         dark:text-white
         dark:shadow-slate-950
         hover:bg-gray-100
@@ -29,7 +29,7 @@ const CartButton = () => {
       <BsCart3
         className="
           text-xl 
-        text-purple-400 
+        text-purple-800 
         dark:text-white
         "
       />
@@ -37,7 +37,7 @@ const CartButton = () => {
         className="
           inline-block
           font-semibold 
-          text-purple-400 
+          text-purple-800 
           dark:text-white
         "
       >
