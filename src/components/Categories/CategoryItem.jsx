@@ -16,8 +16,6 @@ const CategoryItem = ({
       {location.pathname === path && (
         <motion.div
           layoutId="active-item"
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
           transition={{ duration: .3, type: "spring" }}
           className="absolute inset-0  bg-white dark:bg-slate-600 rounded-t-lg shadow-sm shadow-slate-700 dark:shadow-slate-950 h-16 w-32"
         />

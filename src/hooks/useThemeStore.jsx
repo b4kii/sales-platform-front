@@ -1,7 +1,9 @@
 import { create } from "zustand";
 
+const theme = localStorage.getItem("market-theme");
+
 const useThemeStore = create(set => ({
-  isLight: true,
+  isLight: theme ? theme === "light" ? true : false : true,
   toggleTheme: () => set((state) => ({ isLight: !state.isLight})),
 }));
 
