@@ -7,10 +7,10 @@ const Searchbar = () => {
     <div
       className="
         group 
-        mr-auto 
+        mx-auto
         flex 
         h-12
-        w-64
+        w-full
         items-center
         gap-4
         rounded-3xl 
@@ -27,8 +27,7 @@ const Searchbar = () => {
         dark:bg-slate-600
         dark:shadow-slate-950
         dark:focus-within:outline-white
-        md:w-80
-        lg:w-[30rem]
+        md:w-[30rem]
       "
     >
       <div

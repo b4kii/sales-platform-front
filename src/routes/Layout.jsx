@@ -19,7 +19,7 @@ const Layout = () => {
       <SingupModal />
       <ThemeButton />
       <Navbar />
-      <div className="pt-[6rem]">
+      <div className="pt-[10rem] lg:pt-[6rem]">
         <Outlet />
       </div>
       <Footer />

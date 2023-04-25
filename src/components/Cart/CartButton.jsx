@@ -12,8 +12,8 @@ const CartButton = () => {
         gap-2
         rounded-xl
         bg-white
-        p-2.5
-        text-xl
+        p-3.5
+        text-lg
         text-purple-800
         shadow-sm
         shadow-slate-700
@@ -36,6 +36,7 @@ const CartButton = () => {
       />
       <span
         className="
+          whitespace-nowrap
           inline-block
           font-semibold 
           text-purple-800 

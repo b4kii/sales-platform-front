@@ -7,9 +7,10 @@ const Button = forwardRef(
       <button
         ref={ref}
         className={`
+        whitespace-nowrap
         rounded-xl
+        text-lg
         p-3.5
-        text-xl
         font-semibold
         ${
           secondary

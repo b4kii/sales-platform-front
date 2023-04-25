@@ -35,7 +35,7 @@ const Modal = ({
   return (
     <div 
       onClick={handleClose}
-      className="fixed left-0 top-0 z-[9999] flex h-screen w-screen items-center justify-center bg-neutral-800 bg-opacity-50 ">
+      className="fixed left-0 top-0 z-[9999] flex h-screen w-screen items-center justify-center backdrop-blur-md">
       <div
         className="
           relative
@@ -61,9 +61,9 @@ const Modal = ({
             flex-col
             rounded-lg
             border-0
-            bg-white
-            shadow-lg
+            shadow-md
             dark:bg-slate-700
+            dark:shadow-slate-950
             lg:h-auto
           "
         >

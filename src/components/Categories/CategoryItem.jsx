@@ -24,7 +24,6 @@ const CategoryItem = ({ path, name, icon: Icon }) => {
         to={path}
         className="relative z-10 flex h-full w-full flex-col items-center justify-center text-xl"
       >
-        {/* {icon} */}
         <Icon />
         <span>{name}</span>
       </Link>

@@ -16,7 +16,6 @@ const SignupModal = () => {
   const handleSubmit = async () => {
     try {
       setIsLoading(true);
-
       signupStore.onClose();
     } catch (error) {
       console.log(error)
