@@ -5,6 +5,8 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar/Navbar';
 import ThemeButton from '../components/ThemeButton';
 import Modal from '../components/Modal';
+import LoginModal from '../components/Modals/LoginModal';
+import SingupModal from '../components/Modals/SignupModal';
 
 
 const Layout = () => {
@@ -13,7 +15,8 @@ const Layout = () => {
 
   return (
     <div className={`${themeStore.isLight ? "" : "dark"}`}>
-      <Modal />
+      <LoginModal />
+      <SingupModal />
       <ThemeButton />
       <Navbar />
       <div className="pt-[6rem]">

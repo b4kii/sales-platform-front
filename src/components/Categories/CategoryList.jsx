@@ -9,25 +9,25 @@ const CategoryList = () => {
       id: 1,
       path: "/category/electronic",
       name: "Electronic",
-      icon: <BsLightningFill />,
+      icon: BsLightningFill,
     },
     {
       id: 2,
       path: "/category/sport",
       name: "Sport",
-      icon: <BiFootball />,
+      icon: BiFootball,
     },
     {
       id: 3,
       path: "/category/automotive",
       name: "Automotive",
-      icon: <BsFillCarFrontFill />,
+      icon: BsFillCarFrontFill,
     },
     {
       id: 4,
       path: "/category/fashion",
       name: "Fashion",
-      icon: <GiClothes />,
+      icon: GiClothes,
     },
   ];
 

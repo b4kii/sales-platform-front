@@ -19,16 +19,16 @@ const Searchbar = () => {
         shadow-slate-700
         outline-none
         outline-offset-0
+        transition-[outline-color]
+        duration-300
         focus-within:outline
-        focus-within:outline-2
-        focus-within:outline-purple-400
+        focus-within:outline-4
+        focus-within:outline-purple-800
         dark:bg-slate-600
         dark:shadow-slate-950
         dark:focus-within:outline-white
         md:w-80
-        lg:w-96
-        transition-[outline-color]
-        duration-300
+        lg:w-[30rem]
       "
     >
       <div
@@ -59,6 +59,7 @@ const Searchbar = () => {
           focus:border-none 
           focus:outline-none 
           dark:text-white
+          text-lg
         "
         type="text"
         placeholder="Search"

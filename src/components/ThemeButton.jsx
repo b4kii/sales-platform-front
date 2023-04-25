@@ -18,14 +18,12 @@ const ThemeButton = () => {
       localStorage.setItem("market-theme", "dark");
     }
 
-    console.log(theme);
   }, [themeStore.isLight]);
 
   return (
     <button
       className="fixed bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 text-white shadow-sm shadow-black dark:bg-slate-200 dark:text-black"
       onClick={themeStore.toggleTheme}
-      // onClick={handleClick}
     >
       {themeStore.isLight ? (
         <BsFillMoonStarsFill />
