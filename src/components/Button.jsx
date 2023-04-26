@@ -9,8 +9,8 @@ const Button = forwardRef(
         className={`
         whitespace-nowrap
         rounded-xl
-        text-lg
         p-3.5
+        text-lg
         font-semibold
         ${
           secondary
@@ -35,12 +35,11 @@ const Button = forwardRef(
         duration-300
         ${className}
       `}
-        onClick={() => {
-          onClick && onClick();
-        }}
+        // onClick={() => { onClick && onClick(); }}
+        onClick={onClick}
       >
         {label}
-      </button>
+      </button> //
     );
   }
 );

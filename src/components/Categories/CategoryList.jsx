@@ -32,7 +32,7 @@ const CategoryList = () => {
   ];
 
   return (
-    <div className="flex h-24 w-full items-end justify-center gap-4 bg-slate-200 dark:bg-slate-700 overflow-y-auto">
+    <div className="flex h-24 w-full items-end justify-center gap-4 bg-slate-200 dark:bg-slate-700 overflow-y-hidden overflow-x-auto">
       {categories.map(category => {
         return (
           <CategoryItem

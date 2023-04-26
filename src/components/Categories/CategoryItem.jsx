@@ -17,7 +17,7 @@ const CategoryItem = ({ path, name, icon: Icon }) => {
         <motion.div
           layoutId="active-item"
           transition={{ duration: 0.3, type: "spring" }}
-          className="absolute inset-0  h-16 w-32 rounded-t-lg bg-white shadow-sm shadow-slate-700 dark:bg-slate-600 dark:shadow-slate-950"
+          className="absolute  h-24 w-32 rounded-t-lg bg-white shadow-sm shadow-slate-700 dark:bg-slate-600 dark:shadow-slate-950"
         />
       )}
       <Link

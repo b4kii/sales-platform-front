@@ -65,6 +65,7 @@ const Modal = ({
             dark:bg-slate-700
             dark:shadow-slate-950
             lg:h-auto
+            bg-white
           "
         >
           {/* Header */}

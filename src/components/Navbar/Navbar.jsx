@@ -21,12 +21,12 @@ const Navbar = () => {
           <Link to="/">Logo</Link>
         </div>
       </div>
+
       {/* Center */}
       <div className="grow-2 shrink-1 order-1 lg:-order-none basis-full lg:basis-0 flex justify-center lg:w-full">
         <Searchbar />
       </div>
       {/* Right */}
-      {/* <div className=" flex-grow-1 flex-shrink-2 flex w-full justify-end gap-4 "> */}
       <div className="grow-1 shrink-2 lg:w-full ">
         <div className="flex justify-end lg:hidden gap-4">
           <CartButton />
