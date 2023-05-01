@@ -4,11 +4,13 @@ import Button from "../Button";
 import ProfileButton from "../Profile/ProfileButton";
 import useLoginModalStore from "../../hooks/useLoginModalStore";
 import useSignupModalStore from "../../hooks/useSignupModalStore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const loginStore = useLoginModalStore();
   const signupStore = useSignupModalStore();
+
+  const navigate = useNavigate();
 
   return (
     <nav

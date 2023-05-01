@@ -7,6 +7,11 @@ const ProfileButton = () => {
   const profileDropdownStore = useProfileDropdownStore();
   const buttonRef = useRef(null);
 
+  // const handleClick = useCallback((event) => {
+  //   event.stopPropagation();
+  //   profileDropdownStore.toggleOpen();
+  // }, [profileDropdownStore.toggleOpen])
+
   const handleClick = (event) => {
     event.stopPropagation();
     profileDropdownStore.toggleOpen();

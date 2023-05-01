@@ -34,7 +34,6 @@ const Modal = ({
 
   return (
     <div 
-      onClick={handleClose}
       className="fixed left-0 top-0 z-[9999] flex h-screen w-screen items-center justify-center backdrop-blur-md">
       <div
         className="
@@ -50,9 +49,6 @@ const Modal = ({
       >
         {/* Content */}
         <div
-          onClick={(event) => {
-            event.stopPropagation();
-          }}
           className="
             relative
             flex
@@ -61,11 +57,12 @@ const Modal = ({
             flex-col
             rounded-lg
             border-0
-            shadow-md
+            shadow-sm
+            shadow-gray-400
             dark:bg-slate-700
             dark:shadow-slate-950
             lg:h-auto
-            bg-white
+            bg-slate-200
           "
         >
           {/* Header */}

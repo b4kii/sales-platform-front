@@ -21,8 +21,7 @@ const Searchbar = () => {
         outline-offset-0
         transition-[outline-color]
         duration-300
-        focus-within:outline
-        focus-within:outline-4
+        focus-within:outline-2
         focus-within:outline-purple-800
         dark:bg-slate-600
         dark:shadow-slate-950

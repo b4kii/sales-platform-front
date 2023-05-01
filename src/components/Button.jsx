@@ -1,12 +1,12 @@
 import React, { forwardRef, useCallback } from "react";
 import { BsTypeH1 } from "react-icons/bs";
 
-const Button = forwardRef(
-  ({ label, secondary, onClick, className }, ref) => {
-    return (
-      <button
-        ref={ref}
-        className={`
+const Button = forwardRef((props, ref) => {
+  const { label, secondary, onClick, className, disabled } = props;
+  return (
+    <button
+      ref={ref}
+      className={`
         whitespace-nowrap
         rounded-xl
         p-3.5
@@ -23,7 +23,7 @@ const Button = forwardRef(
             : "text-white dark:text-slate-950"
         }
         ${
-          secondary ? "bg-transparent" : "bg-purple-800 dark:bg-white"
+          secondary ? "bg-transparent" : "bg-purple-500 dark:bg-white"
         }
         ${secondary ? "" : "shadow-gray-400 dark:shadow-slate-950"}
         ${
@@ -31,17 +31,16 @@ const Button = forwardRef(
             ? "hover:bg-gray-100 dark:hover:bg-slate-900"
             : "hover:bg-purple-500 dark:hover:bg-slate-300"
         }
+        ${disabled && "bg-gray-500"}
         transition-[background-color]
         duration-300
         ${className}
       `}
-        // onClick={() => { onClick && onClick(); }}
-        onClick={onClick}
-      >
-        {label}
-      </button> //
-    );
-  }
-);
+      onClick={onClick}
+    >
+      {label}
+    </button> //
+  );
+});
 
 export default Button;

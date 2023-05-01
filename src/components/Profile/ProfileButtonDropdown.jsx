@@ -4,9 +4,9 @@ import useProfileDropdownStore from "../../hooks/useProfileDropdownStore";
 import Dropdown from "../Dropdown/Dropdown";
 import Button from "../Button";
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import {  useEffect, useRef } from "react";
 
-const ProfileButtonDropdown = ({ buttonRef }) => {
+const ProfileButtonDropdown = () => {
   const loginStore = useLoginModalStore();
   const signupStore = useSignupModalStore();
   const profileDropdownStore = useProfileDropdownStore();
@@ -38,10 +38,7 @@ const ProfileButtonDropdown = ({ buttonRef }) => {
       <Button
         label="Sign Up"
         secondary
-        // onClick={signupStore.onOpen}
-        onClick={event => {
-          signupStore.onOpen();
-        }}
+        onClick={signupStore.onOpen}
         className="w-full lg:hidden"
       />
       <Button

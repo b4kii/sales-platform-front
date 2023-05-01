@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Electronic = () => {
+export const Electronic = () => {
   return (
     <div>
       electronic
     </div>
   );
 };
-
-export default Electronic;

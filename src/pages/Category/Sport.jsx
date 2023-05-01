@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Temp = () => {
+export const Sport = () => {
   return (
     <div>
-      Temp
+      swir
     </div>
   );
 };
-
-export default Temp;

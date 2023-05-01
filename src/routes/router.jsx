@@ -1,12 +1,28 @@
-import { createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import Layout from "./Layout";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
 
-import Home from "../pages/Home/Home";
-import Temp from "../pages/Temp/Temp";
-import Sport from "../pages/Sport";
-import Electronic from "../pages/Electronic";
-import Automotive from "../pages/Automotive";
-import Fashion from "../pages/Fashion";
+import Layout from "./Layout";
+import ProtectedRoute from "../components/ProtectedRoute";
+
+// import {
+//   Home,
+//   Sport,
+//   Automotive,
+//   Electronic,
+//   Fashion,
+//   ProtectedRoute,
+// } from "./pagesLazy";
+
+import {
+  Fashion,
+  Sport,
+  Automotive,
+  Electronic,
+  Home,
+  Admin,
+} from "../pages";
 
 const router = createBrowserRouter([
   {
@@ -19,28 +35,32 @@ const router = createBrowserRouter([
         children: [
           {
             path: "category/sport",
-            element: <Sport />
+            element: <Sport />,
           },
           {
             path: "category/electronic",
-            element: <Electronic />
+            element: <Electronic />,
           },
           {
             path: "category/automotive",
-            element: <Automotive />
+            element: <Automotive />,
           },
           {
             path: "category/fashion",
-            element: <Fashion />
-          }
-        ]
+            element: <Fashion />,
+          },
+        ],
       },
       {
-        path: "/temp",
-        element: <Temp />
-      }
-    ]
-  }
-])
+        path: "/admin",
+        element: (
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
+        ),
+      },
+    ],
+  },
+]);
 
-export {router} ;
+export { router };

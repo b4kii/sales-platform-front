@@ -26,7 +26,7 @@ const LoginModal = () => {
     <div className="flex flex-col gap-8 items-center">
       <Input 
         placeholder="Email"
-        type="text"
+        type="email"
         onChange={(event) => {
           setEmail(event.target.value)
         }}

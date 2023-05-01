@@ -3,6 +3,8 @@ import { BsFillCarFrontFill, BsLightningFill } from "react-icons/bs";
 import { GiClothes } from "react-icons/gi";
 import CategoryItem from "./CategoryItem";
 
+// TODO: Make mobile version
+
 const CategoryList = () => {
   const categories = [
     {

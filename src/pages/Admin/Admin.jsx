@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Sport = () => {
+export const Admin = () => {
   return (
     <div>
-      swir
+      Admin
     </div>
   );
 };
-
-export default Sport;
