@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import { useState } from "react";
 
+// TODO: Refactor onBlur method
+
 const Input = forwardRef((props, ref) => {
   const [focused, setFocused] = useState(false);
 

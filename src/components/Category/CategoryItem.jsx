@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
-const CategoryItem = ({ path, name, icon: Icon, id, index }) => {
+export const CategoryItem = ({ path, name, icon: Icon, id, index }) => {
   const location = useLocation();
 
   return (
@@ -27,7 +27,7 @@ const CategoryItem = ({ path, name, icon: Icon, id, index }) => {
       </AnimatePresence>
       <Link
         to={path}
-        className="relative z-10 flex h-full w-full flex-col items-center justify-center text-sm lg:text-xl"
+        className="relative z-10 flex h-full w-full flex-col items-center justify-center text-sm lg:text-lg"
       >
         <Icon />
         <span>{name}</span>
@@ -35,5 +35,3 @@ const CategoryItem = ({ path, name, icon: Icon, id, index }) => {
     </div>
   );
 };
-
-export default CategoryItem;

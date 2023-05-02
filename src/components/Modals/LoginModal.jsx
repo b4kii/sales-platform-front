@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import { useState } from "react";
 import Input from "../Input";
-import Modal from '../Modal';
-import useLoginModalStore from '../../hooks/useLoginModalStore';
+import Modal from "../Modal";
+import useLoginModalStore from "../../hooks/useLoginModalStore";
 
 const LoginModal = () => {
   const loginStore = useLoginModalStore();
@@ -16,37 +16,80 @@ const LoginModal = () => {
 
       loginStore.onClose();
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
-  }
+  };
+
+  const inputs = [
+    {
+      id: 1,
+      type: "email",
+      name: "email",
+      placeholder: "Email",
+      onChange: event => setEmail(event.target.value),
+      required: true,
+      disabled: isLoading,
+      value: email,
+      error: ["Email is required"],
+    },
+    {
+      id: 2,
+      type: "password",
+      name: "password",
+      placeholder: "Password",
+      onChange: event => setPassword(event.target.value),
+      required: true,
+      disabled: isLoading,
+      value: password,
+      error: ["Password is required"],
+    },
+  ];
 
   const bodyContent = (
-    <div className="flex flex-col gap-8 items-center">
-      <Input 
+    <div className="flex flex-col items-center gap-8">
+      {inputs.map(input => {
+        return (
+          <div
+            className="relative flex w-full flex-col gap-4"
+            key={input.id}
+          >
+            <Input
+              placeholder={input.placeholder}
+              type={input.type}
+              onChange={input.onChange}
+              value={input.value}
+              disabled={input.disabled}
+              required={input.required}
+              className="relative z-10"
+            />
+          </div>
+        );
+      })}
+      {/* <Input
         placeholder="Email"
         type="email"
-        onChange={(event) => {
-          setEmail(event.target.value)
+        onChange={event => {
+          setEmail(event.target.value);
         }}
         value={email}
         disabled={isLoading}
       />
-      <Input 
+      <Input
         placeholder="Password"
         type="password"
-        onChange={(event) => {
-          setPassword(event.target.value)
+        onChange={event => {
+          setPassword(event.target.value);
         }}
         value={password}
         disabled={isLoading}
-      />
+      /> */}
     </div>
-  )
+  );
 
   return (
-    <Modal 
+    <Modal
       disabled={isLoading}
       isOpen={loginStore.isOpen}
       title="Login"

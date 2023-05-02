@@ -3,7 +3,10 @@ import Input from "../Input";
 import Modal from "../Modal";
 import useSignupModalStore from "../../hooks/useSignupModalStore";
 import zxcvbn from "zxcvbn";
+import InputError from "../InputError";
 
+
+// TODO: Refactor this code
 const SignupModal = () => {
   const signupStore = useSignupModalStore();
 
@@ -25,7 +28,6 @@ const SignupModal = () => {
   };
 
   useEffect(() => {
-    console.log(passwordScore);
     if (password === "") {
       setPasswordMeterStyles("");
       setPasswordMeterMessage("");
@@ -82,8 +84,9 @@ const SignupModal = () => {
       disabled: isLoading,
       value: name,
       error: [
-        "Name must contain only letters and numbers",
-        "should be from 4-20 characters long",
+        "Name is required",
+        "Must contain only letters and numbers",
+        "Should be from 4-20 characters long",
       ],
     },
     {
@@ -96,26 +99,24 @@ const SignupModal = () => {
       required: true,
       disabled: isLoading,
       value: email,
-      error: ["Invalid email format!"],
+      error: ["Email is required", "Provide valid email format"],
     },
     {
       id: 3,
       type: "password",
       name: "password",
       placeholder: "Password",
-      // onChange: event => setPassword(event.target.value),
       onChange: handlePasswordChange,
-      pattern: "(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
+      pattern: "(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*s).{8,}",
       required: true,
       disabled: isLoading,
       value: password,
       error: [
         "Password is required",
-        "should be at least 8 characters long",
-        "contain at least one digit",
-        "at least one lowercase letter",
-        "at least one uppercase letter",
-        "should not contain any spaces",
+        "Should be at least 8 characters long",
+        "Contain at least one digit",
+        "At least one lowercase letter",
+        "At least one uppercase letter",
       ],
     },
     {
@@ -149,21 +150,14 @@ const SignupModal = () => {
             pattern={input.pattern}
             className="relative z-10"
           />
-          {}
-          <div className="max-h-0 w-full overflow-hidden text-center text-sm text-red-400 transition-[max-height] duration-300 ease-in-out peer-invalid:peer-data-[focused='true']:max-h-[10rem]">
-            <ul>
-              {input.error.map((error, index) => (
-                <li key={index}>{error}</li>
-              ))}
-            </ul>
-          </div>
+          <InputError errorsList={input.error}/>
           {input.name === "password" && (
             <>
-              <div className="mx-auto h-[10px] w-1/2 rounded-xl bg-white">
+              <div className="mx-auto h-[10px] w-[90%] rounded-xl bg-white">
                 <div
                   className={`h-[10px] rounded-xl transition-[width] duration-500 ${passwordMeterStyles}`}
                 ></div>
-                <div className="text-center text-sm font-semibold">
+                <div className="py-2 text-center text-sm font-semibold text-purple-800 dark:text-white">
                   {passwordMeterMessage}
                 </div>
               </div>

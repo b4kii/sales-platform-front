@@ -14,7 +14,7 @@ const Layout = () => {
   return (
   // TODO: Loading component
     <Suspense fallback={<div>Layout loading...</div>}>
-      <div className={`${themeStore.isLight ? "light" : "dark"}`}>
+      <div className={`${themeStore.isLight ? "light" : "dark"} font-mulish`}>
         <LoginModal />
         <SignupModal />
         <ThemeButton />
