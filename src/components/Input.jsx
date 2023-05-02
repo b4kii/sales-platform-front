@@ -53,8 +53,8 @@ const Input = forwardRef((props, ref) => {
           dark:text-white
           dark:shadow-slate-950 
           dark:focus-within:outline-white 
-          invalid:outline-red-400
-          invalid:focus-within:outline-red-400
+          invalid:data-[focused='true']:outline-red-400
+          invalid:data-[focused='true']:focus-within:outline-red-400
           ${className}
           peer
         `}

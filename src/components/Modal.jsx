@@ -51,6 +51,7 @@ const Modal = ({
         <div
           className="
             relative
+            overflow-y-auto
             flex
             h-full
             w-full
