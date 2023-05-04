@@ -9,7 +9,7 @@ export default {
       },
       gridTemplateColumns: {
         fluid:
-          "repeat(auto-fit, minmax(100px, 1fr))",
+          "repeat(auto-fit, minmax(200px, 1fr))",
       },
     },
   },

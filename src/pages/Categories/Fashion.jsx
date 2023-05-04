@@ -1,9 +1,9 @@
-import React from 'react';
+import { ProductsContainer } from "../../components/Products";
 
 export const Fashion = () => {
   return (
-    <div>
-      Fashion
-    </div>
+    <ProductsContainer>
+      test
+    </ProductsContainer>
   );
 };

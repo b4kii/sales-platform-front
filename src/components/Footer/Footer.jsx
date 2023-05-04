@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-slate-300">
       Footer
     </div>
   );

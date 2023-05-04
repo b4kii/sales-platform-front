@@ -107,7 +107,7 @@ const SignupModal = () => {
       name: "password",
       placeholder: "Password",
       onChange: handlePasswordChange,
-      pattern: "(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*s).{8,}",
+      pattern: "(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*\s?).{8,}",
       required: true,
       disabled: isLoading,
       value: password,
@@ -158,7 +158,7 @@ const SignupModal = () => {
                   className={`h-[10px] rounded-xl transition-[width] duration-500 ${passwordMeterStyles}`}
                 ></div>
                 <div className="py-2 text-center text-sm font-semibold text-purple-800 dark:text-white">
-                  {passwordMeterMessage}
+                  {passwordMeterMessage.length > 0 ? passwordMeterMessage : "Password meter"}
                 </div>
               </div>
             </>

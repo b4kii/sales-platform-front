@@ -1,8 +1,9 @@
+import { ProductsContainer } from "../../components/Products";
 
 export const Automotive = () => {
   return (
-    <div>
-      Automotive
-    </div>
+    <ProductsContainer>
+      Test
+    </ProductsContainer>
   );
 };

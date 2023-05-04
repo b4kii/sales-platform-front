@@ -1,9 +1,9 @@
-import React from 'react';
+import { ProductsContainer } from "../../components/Products";
 
 export const Electronic = () => {
   return (
-    <div>
-      electronic
-    </div>
+    <ProductsContainer>
+      asdf
+    </ProductsContainer>
   );
 };

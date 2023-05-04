@@ -27,7 +27,7 @@ export const CategoryItem = ({ path, name, icon: Icon, id, index }) => {
       </AnimatePresence>
       <Link
         to={path}
-        className="relative z-10 flex h-full w-full flex-col items-center justify-center text-sm lg:text-lg"
+        className="relative z-10 flex h-full w-full flex-col items-center justify-center lg:text-lg"
       >
         <Icon />
         <span>{name}</span>

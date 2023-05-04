@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 export const Home = () => {
   return (
-    <div className="h-screen bg-white">
+    <div className="bg-white">
       <CategoryList />
       <CategoryContainer>
         <CategorySidebar />

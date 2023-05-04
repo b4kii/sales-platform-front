@@ -1,12 +1,38 @@
+import { Rating } from "./Rating";
+import { useNavigate } from "react-router-dom";
+
 // TODO: Temp list items, refactors this later
-export const ProductItem = ({name, category, price, stars}) => {
+export const ProductItem = ({
+  id,
+  name,
+  price,
+  rating,
+  image,
+  desc,
+}) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="justify-self-center w-full border-2 border-slate-900 flex flex-col items-center">
-      {/* image */}
-      <div className="w-full h-40 bg-green-300"></div>
+    <div
+      className="flex w-full cursor-pointer flex-col items-center gap-4 justify-self-center rounded-xl p-4 hover:bg-purple-200"
+      onClick={() => {navigate(`/product/${id}`)}}
+    >
+      <div>
+        <img
+          src={image}
+          alt=""
+          className="h-auto w-64 rounded-xl"
+        />
+      </div>
+      <div>{desc}</div>
       <div>{name}</div>
       <div>{price}</div>
-      <div>{stars}</div>
+      <Rating
+        rating={rating}
+        starBackground={"gold"}
+        starColor="gray"
+        size={"1.5rem"}
+      />
     </div>
-  )
-}
+  );
+};
