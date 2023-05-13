@@ -7,17 +7,13 @@ const ThemeButton = () => {
   const themeStore = useThemeStore();
 
   useEffect(() => {
-    const theme = localStorage.getItem("market-theme");
+    let  theme = localStorage.getItem("market-theme");
     if (!theme) {
       localStorage.setItem("market-theme", "light");
-    }
-
-    if (themeStore.isLight) {
-      localStorage.setItem("market-theme", "light");
     } else {
-      localStorage.setItem("market-theme", "dark");
+      theme = themeStore.isLight ? "light" : "dark";
+      localStorage.setItem("market-theme", theme);
     }
-
   }, [themeStore.isLight]);
 
   return (
