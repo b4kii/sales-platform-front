@@ -1,6 +1,6 @@
 import styles from "../../styles/Rating.module.css";
 
-export const Rating = ({
+export const ProductRating = ({
   rating,
   starColor,
   starBackground,

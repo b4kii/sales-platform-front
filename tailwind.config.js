@@ -8,8 +8,7 @@ export default {
         mulish: ["Mulish", "sans-serif"],
       },
       gridTemplateColumns: {
-        fluid:
-          "repeat(auto-fit, minmax(200px, 1fr))",
+        fluid: "repeat(auto-fit, minmax(200px, 1fr))",
       },
     },
   },

@@ -2,6 +2,7 @@ import { ProductItem } from "./ProductItem";
 import { products } from "../../utils/tempProducts";
 
 // px-10
+// TODO: Pagination and lazy loading
 
 export const ProductsList = () => {
   return (

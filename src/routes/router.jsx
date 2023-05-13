@@ -22,6 +22,8 @@ import {
   Electronic,
   Home,
   Admin,
+  NotFound,
+  Product,
 } from "../pages";
 
 const router = createBrowserRouter([
@@ -53,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/product/:id",
-        element: <h1>Product</h1>,
+        element: <Product />,
       },
       {
         path: "/admin",
@@ -62,6 +64,10 @@ const router = createBrowserRouter([
             <Admin />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

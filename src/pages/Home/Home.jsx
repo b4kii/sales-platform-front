@@ -1,23 +1,24 @@
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import {
   CategoryList,
-  CategoryContainer,
-  CategorySidebar
 } from "../../components/Category";
+import { Container } from "../../components/Container";
+import { ProductsSidebar } from "../../components/Products";
 import { Suspense } from "react";
 
 export const Home = () => {
   return (
-    <div className="bg-white">
+    // <div className="bg-white">
+    <>
       <CategoryList />
-      <CategoryContainer>
-        <CategorySidebar />
+      <Container>
+        <ProductsSidebar />
         {/* TODO: Loading component */}
         <Suspense fallback={<div>loadnig...</div>}>
-          {/* Categories outlet */}
           <Outlet />
         </Suspense>
-      </CategoryContainer>
-    </div>
+      </Container>
+    {/* </div> */}
+    </>
   );
 };

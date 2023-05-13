@@ -34,7 +34,7 @@ export const CategoryList = () => {
   ];
 
   return (
-    <div className="flex h-24 w-full items-end justify-center gap-4 overflow-x-auto overflow-y-hidden bg-slate-200 px-20 dark:bg-slate-700 lg:px-40">
+    <div className="flex h-24 w-full items-end justify-center gap-4 overflow-x-auto overflow-y-hidden bg-slate-200 px-4 dark:bg-slate-700 lg:px-32">
       {categories.map(category => {
         return (
           <CategoryItem

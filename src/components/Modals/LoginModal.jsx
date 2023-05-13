@@ -2,6 +2,7 @@ import { useState } from "react";
 import Input from "../Input";
 import Modal from "../Modal";
 import useLoginModalStore from "../../hooks/useLoginModalStore";
+import axios from "axios";
 
 const LoginModal = () => {
   const loginStore = useLoginModalStore();
@@ -10,10 +11,13 @@ const LoginModal = () => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const url = "https://localhost:7004/api/account/login";
+
   const handleSubmit = async () => {
     try {
       setIsLoading(true);
-
+      const res = await axios.post(url, { login: email, password });
+      console.log(res.data);
       loginStore.onClose();
     } catch (error) {
       console.log(error);
@@ -59,7 +63,7 @@ const LoginModal = () => {
               placeholder={input.placeholder}
               type={input.type}
               onChange={input.onChange}
-              value={input.value}
+              // value={input.value}
               disabled={input.disabled}
               required={input.required}
               className="relative z-10"
@@ -87,7 +91,6 @@ const LoginModal = () => {
       /> */}
     </div>
   );
-
   return (
     <Modal
       disabled={isLoading}
